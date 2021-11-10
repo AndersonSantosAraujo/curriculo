@@ -1,0 +1,512 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap");
+
+:root {
+  --fontFamily1: "Press Start 2P", Arial, Helvetica, sans-serif;
+  --fontFamily2: Arial, Helvetica, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #fb5;
+}
+
+p {
+  line-height: 2.5;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: #000;
+  font-weight: 100;
+}
+
+body.display {
+  font-family: var(--fontFamily1);
+}
+
+body.arial {
+  font-family: var(--fontFamily2);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pre-header {
+  width: 100%;
+  height: 81px;
+  background: url("../img/bg/bg-0.png") no-repeat center right;
+  background-size: 100% 81px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 38px;
+  background: url("../img/bg/bg-1.png") no-repeat center right;
+  background-size: 100% 38px;
+}
+
+.relogio {
+  margin-left: 5%;
+  align-self: center;
+}
+
+.relogio span {
+  color: #ccc;
+  font-size: 16px;
+}
+
+.navegacao {
+  margin: 1px 7% 0 20px;
+}
+
+.navegacao ul {
+  display: flex;
+}
+
+.navegacao ul li {
+  margin-left: 5px;
+}
+
+.navegacao ul li a {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding: 8px 15px;
+  font-size: 16px;
+  color: #ccc;
+  width: 190px;
+}
+
+.fonte {
+  padding: 8px;
+  width: 35px !important;
+}
+
+.navegacao ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transform: skewX(-45deg);
+}
+
+.navegacao ul li a:hover::after,
+.navegacao ul li a.active::after {
+  box-shadow: inset 2px 2px 10px 0 rgba(255, 255, 255, 0.3),
+    inset 4px 4px 10px 1px rgba(255, 255, 255, 0.5);
+}
+
+.navegacao ul li a:hover,
+.navegacao ul li a.active {
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  .relogio span {
+    font-size: 12px;
+  }
+
+  .navegacao {
+    margin: 3px 8% 0 10px;
+  }
+
+  .navegacao ul li a {
+    padding: 8px;
+    font-size: 12px;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 520px) {
+  .relogio span {
+    font-size: 10px;
+  }
+
+  .navegacao ul li a {
+    margin-top: 0px;
+  }
+
+  .navegacao ul li a {
+    padding: 10px 0;
+    font-size: 9px;
+    max-width: 65px;
+  }
+}
+
+.missao {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background: url("../img/bg/bg-2.png") no-repeat center right;
+  background-size: 100% 65px;
+  line-height: 1.5;
+}
+
+.missao h2 {
+  margin-left: 5%;
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .missao h2 {
+    margin-right: 20px;
+    margin-left: 30px;
+    font-size: 12px;
+  }
+}
+
+.missao h2 span {
+  opacity: 1;
+}
+
+.missao h2 span.hide {
+  opacity: 0;
+}
+
+.container-nav {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+  height: 34px;
+  background: url("../img/bg/bg-3.png") no-repeat center right;
+  background-size: 100% 34px;
+}
+
+.intranav {
+  display: flex;
+  width: 70%;
+  height: 26px;
+  margin-right: 7%;
+  margin-top: 2px;
+}
+
+.intranav a {
+  text-align: center;
+  display: inline-block;
+  margin: 0 1px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: none;
+  flex: 1;
+  padding-top: 7px;
+  border-radius: 13px 0 0 13px;
+  position: relative;
+  color: #ccc;
+  font-size: 10px;
+}
+
+.intranav a::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.intranav a::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  right: -18px;
+  top: -1px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.intranav a:hover,
+.intranav a:active {
+  color: #fff;
+  box-shadow: inset 2px 2px 4px 0 rgba(255, 255, 255, 0.1);
+}
+
+.intranav a:hover::before,
+.intranav a.active::before {
+  background: rgba(255, 50, 50, 0.5);
+  box-shadow: 3px 3px 5px 0 rgba(255, 50, 50, 0.3);
+}
+
+.container-content {
+  width: 100%;
+  height: 643px;
+  background: url("../img/bg/bg-4.png") no-repeat center right;
+  background-size: 100% 643px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.content-primary,
+.content-secondary,
+.content-tertiary {
+  display: none !important;
+  position: absolute;
+  left: 4%;
+  width: 92%;
+  height: 100%;
+  background: #000;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 100vh;
+  z-index: 10;
+}
+
+.margin-bt {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.content-primary h1,
+.content-secondary h1,
+.content-tertiary h1 {
+  display: inline-block;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.content-primary,
+.content-secondary,
+.content-tertiary {
+  background: url("../img/bg/bg-soft.png") center center no-repeat;
+  background-size: cover;
+}
+
+.content-primary.active,
+.content-secondary.active,
+.content-tertiary.active {
+  display: flex !important;
+  flex-direction: column;
+  animation: entrada 0.3s forwards;
+}
+
+@keyframes entrada {
+  to {
+    top: 0;
+  }
+}
+
+.content-primary {
+  right: 0;
+}
+
+.content-primary video {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  object-fit: fill;
+}
+
+.skill-container {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.skill {
+  margin-top: 20px;
+  position: relative;
+}
+
+.skill::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: -40px;
+  background: url("../img/mario.png") no-repeat center center;
+  background-size: cover;
+  height: 60px;
+  width: 40px;
+}
+
+.skill h4 {
+  margin: 20px 0;
+  color: #fff;
+}
+
+.skill span {
+  display: inline-block;
+  width: 10px;
+  height: 40px;
+  margin-left: 0px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  width: 100%;
+  min-height: 99px;
+  background: url("../img/bg/bg-5.png") no-repeat center right;
+  background-size: 100% 99px;
+}
+
+.container-grid {
+  padding: 1.5rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: inset 2px 2px 8px 0 rgba(255, 255, 255, 0.3),
+    inset 4px 4px 10px 0 rgba(255, 255, 255, 0.4);
+  transform: scale(0.95);
+}
+
+.card p {
+  color: #fb5;
+  font-size: 10px;
+}
+
+@media (max-width: 720px) {
+  .card {
+    min-width: 80px;
+  }
+
+  .card p {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 580px) {
+  .container-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+
+  .card {
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 580px) {
+  .card p {
+    font-size: 0;
+  }
+
+  .card {
+    margin-top: 20px;
+    min-width: 65px;
+  }
+}
+
+.contato {
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.contato h1 {
+  margin-bottom: 50px;
+}
+
+.contato p {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.contato a {
+  font-size: 16px;
+}
+
+@media (max-width: 940px) {
+  .contato h1 {
+    margin-bottom: 30px;
+  }
+
+  .contato p {
+    margin-top: 15px;
+  }
+
+  .contato a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 660px) {
+  .contato h1 {
+    margin-bottom: 10px;
+  }
+
+  .contato p {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 0.8;
+  }
+
+  .contato a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .contato h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+  }
+
+  .contato p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .contato a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+  }
+}
